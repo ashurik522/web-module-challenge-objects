@@ -105,11 +105,12 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 
-function addReview(rArr, name, rating, feedback){
-  return rArr.push()
+function addReview(arry, name, rating, feedback){
+  arry.push({name, rating, feedback});
+  return arry;
 }
-//addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!')
-
+addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!')
+//console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -122,10 +123,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arry, indexNum) {
+  return `${arry[indexNum].name} gave the restaurant a ${arry[indexNum].rating} star review, and their feedback was: ${arry[indexNum].feedback}`
 }
-
+ getReviewByIndex(reviews, 0)
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -141,8 +142,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(arry) {
+  return `${arry[arry.length -1].name} gave the restaurant a ${arry[arry.length -1].rating} star review, and their feedback was: ${arry[arry.length -1].feedback}`
 } 
 
 
