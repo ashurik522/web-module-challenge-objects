@@ -32,11 +32,15 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.log(createMenuItem('picata', 21.50, 'dinner'))
+console.log(createMenuItem('omlette', 5.50, 'breakfast'))
+console.log(createMenuItem('cake', 4.00, 'dessert'))
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
+You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates
+price depending on the string received as a parameter. 
 
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
@@ -52,10 +56,16 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(custType) {
+    if (custType === 'teacher' || custType === 'student') {
+      return burger.price * .75
+    } else {
+      return burger.price * .9
+    }
+  }
 }
 
-
+console.log(burger.discount('teacher'))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -74,14 +84,15 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5]['feedback'])
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
+reviews[7].feedback= 'this place is chill with really cool people, great for getting work done on weekdays'
+console.log(reviews[7]['feedback'])
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -94,10 +105,10 @@ Write a function that creates an object with name, rating, feedback, add the new
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(rArr, name, rating, feedback){
+  return rArr.push()
 }
-
+//addReview(reviews, 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
